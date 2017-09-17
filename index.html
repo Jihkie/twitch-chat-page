@@ -1,11 +1,12 @@
 <html>
 <head>
-<link rel="icon" href="https://dl.dropboxusercontent.com/s/un01dod41byto8c/twitch%20icon.ico">
+	<title>chat</title>
+	<link rel="icon" href="https://dl.dropboxusercontent.com/s/un01dod41byto8c/twitch%20icon.ico">
 </head>
 <body style="margin: 0px;">
 	<div>
-	<input type="text" id="myText" placeholder="channel name">
-	<button onclick="myFunction()">reload</button>
+		<input type="text" id="myText" placeholder="channel name">
+		<button onclick="myFunction()">reload</button>
 	</div>
 	<iframe id="chat" style="border: none;height: 576px;width: 340px;"></iframe>
 	<script>
@@ -13,7 +14,8 @@
 		var x = document.getElementById("myText").value;
 		//document.getElementById("demo").innerHTML = x;
 		document.getElementById("chat").setAttribute("src", "https://www.twitch.tv/" + x + "/chat/");
+		document.getElementsByTagName("TITLE")[0].text = (x + "'s chat");
 	}
-</script>
+	</script>
 </body>
 </html>
